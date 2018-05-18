@@ -97,7 +97,6 @@ end do
 end do
 close(200)
 
-
 end
 
 
@@ -208,7 +207,7 @@ do while(err.gt.tol)
 	end do
 	end do
 
-    !neumann boundary condition
+    ! Neumann boundary condition
     do j = 1,5
       u(nx,j) = (1.0d0/11.0d0)*(18.0d0*u(nx-1,j) - 9.0d0*u(nx-2,j) + 2.0d0*u(nx-3,j))
     end do
@@ -229,12 +228,4 @@ do while(err.gt.tol)
     err = maxval(e)
 
 end do
-
-
 end 
-
-
-
-
-
-
